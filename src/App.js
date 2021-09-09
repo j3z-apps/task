@@ -32,7 +32,7 @@ function App() {
     var data = JSON.stringify({
       "tasks": state.tasks
     })
-    fetch(`/login/${state.userInfo.username}/${state.userInfo.password}/settasks`, {method: 'post', headers: {
+    fetch(`https://tasks--api.herokuapp.com/login/${state.userInfo.username}/${state.userInfo.password}/settasks`, {method: 'post', headers: {
       'Accept': 'application/json, text/plain, */*',
       'Content-Type': 'application/json'
     }, body: data})  
@@ -42,7 +42,7 @@ function App() {
   async function getDBTasks(userInfo) {
     var promise = false
     if (userInfo.username !== '') {
-      promise = await fetch(`/login/${userInfo.username}/${userInfo.password}/gettasks`).then(res => {
+      promise = await fetch(`https://tasks--api.herokuapp.com/login/${userInfo.username}/${userInfo.password}/gettasks`).then(res => {
         if (res.status === 200) {return res.json()} else {return false}
       })
     }
@@ -96,7 +96,7 @@ function App() {
     if (username !== '' && password !== '') {
       let warn = document.getElementById('warnings-label')
       warn.innerText = ''
-      fetch(`/login/${username}/${password}/gettasks`).then(res => {  
+      fetch(`https://tasks--api.herokuapp.com/login/${username}/${password}/gettasks`).then(res => {  
         if (res.status === 404) {     
           warn.innerText = 'Wrong Credentials!'
           setTimeout(() => warn.innerText = '', 4000)
@@ -116,7 +116,7 @@ function App() {
   // SIGN UP
   function handleSignUp(newUsername, newPassword) {
     var warn = document.getElementById('warnings-label')
-    fetch(`/signup/${newUsername}/${newPassword}`, {method: 'post'}).then(res => {
+    fetch(`https://tasks--api.herokuapp.com/signup/${newUsername}/${newPassword}`, {method: 'post'}).then(res => {
       if (res.status === 200) {
         warn.innerText = 'The registration was successful! You may login now.'
         setTimeout(() => warn.innerText = '', 4000)
@@ -142,7 +142,7 @@ function App() {
   function handleDeleteAccount() {
     console.log('HANDLE DELETE')
     if (window.confirm('Are you sure you want to delete your account?')) {
-      fetch(`/delete/${state.userInfo.username}/${state.userInfo.password}`).then(res => {
+      fetch(`https://tasks--api.herokuapp.com/delete/${state.userInfo.username}/${state.userInfo.password}`).then(res => {
         console.log(res)
         if (res.status === 200) handleLogout()
       })
