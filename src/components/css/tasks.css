@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap");
+
+* {
+  font-family: "Titillium Web";
+  font-size: 1.2rem;
+}
+body {
+  background: #2c0c15;
+  color: white;
+}
+button {
+  background-color: red;
+  color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+span {
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-left: 20px;
+  width: 200px;
+}
+h1 {
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-left: 20px;
+  width: 300px;
+}
+
+.logged-section {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.logged-section button,
+.logged-section span {
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 0;
+}
+.red-btn:hover {
+  cursor: pointer;
+  background-color: rgb(255, 0, 0, 0.7);
+}
+.green-btn:hover {
+  cursor: pointer;
+  background-color: blue;
+}
+.buttons #create-task {
+  margin-right: 5px;
+}
+.buttons #delete-all-tasks {
+  margin-left: 5px;
+}
+.task-wrapper .green-btn {
+  margin-right: 5px;
+}
+.task-wrapper .red-btn {
+  margin-left: 5px;
+}
+.green-btn {
+  background-color: green;
+}
+.logged-btns-wrapper {
+  display: flex;
+  align-items: center;
+}
+.logged-btn {
+  padding: 5px 10px;
+  max-width: 145px;
+}
+.logged-btns-wrapper #logout {
+  margin-right: 5px;
+}
+.logged-btns-wrapper #delete-account {
+  margin-left: 5px;
+}
+
+/* CREATE TASK */
+.create-task-wrapper {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.task-wrapper {
+  margin: 15px 0;
+  display: grid;
+  grid-template-areas: "a b";
+}
+.task-wrapper h1 {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 100%;
+  width: 50vw;
+}
+
+input {
+  min-width: 600px;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.complete-tasks,
+.incomplete-tasks {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: green;
+  width: 90vw;
+}
+
+.complete-tasks:before {
+  content: "";
+  display: block;
+  background-color: green;
+  width: 100%;
+  height: 1px;
+  border: 5px solid green;
+  border-radius: 20px;
+}
+
+.incomplete-tasks:before {
+  content: "";
+  display: block;
+  background-color: red;
+  width: 100%;
+  height: 1px;
+  border: 5px solid red;
+  border-radius: 20px;
+}
+
+/* LOGIN PAGE */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2a1a43;
+}
+.login-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 500px;
+  max-height: 650px;
+  padding: 30px 0;
+  background-color: #431205;
+  border: 3px solid #fdb659;
+  border-radius: 15px;
+  opacity: 0.8;
+}
+.login-card h1 {
+  margin: 0 0 50px 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+.input-field {
+  margin: 8px 0 40px 0;
+  min-width: 80%;
+}
+.btns-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.btn-outline-success,
+.btn-outline-secondary {
+  display: block;
+  margin: 0;
+  padding: 10px 0;
+  width: 170px;
+}
+.btn-outline-success {
+  margin-bottom: 30px;
+  padding: 20px;
+  width: 75%;
+}
+#warnings-label {
+  width: 90%;
+  min-height: 40px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  font-size: 1rem;
+  color: rgb(202, 183, 183);
+}
+
+@media (max-width: 1000px) {
+  input {
+    min-width: 90%;
+  }
+  .create-task-wrapper {
+    flex-direction: column;
+  }
+  .create-task-wrapper .buttons {
+    margin-top: 20px;
+  }
+  .logged-section {
+    width: 70vw;
+    margin-bottom: 15px;
+  }
+  .logged-btn button {
+    max-height: 100px;
+    max-width: 250px;
+  }
+  .task-wrapper .buttons {
+    flex-direction: column;
+    font-size: 0.7rem;
+  }
+  .login-card {
+    min-width: 85vw;
+  }
+  .task-wrapper .green-btn {
+    margin-right: 0;
+  }
+  .task-wrapper .red-btn {
+    margin-left: 0;
+  }
+}
