@@ -1,5 +1,5 @@
 # Public Tasks Web App
-https://j3z-apps.github.io/tasks/
+https://j3z-apps.github.io/task/
 
 ## What is it?
 An online tasks app that allows users to create accounts and access their tasks everywhere.
