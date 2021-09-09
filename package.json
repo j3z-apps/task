@@ -2,7 +2,7 @@
   "name": "prac",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://j3z-apps.github.io/tasks",
+  "homepage": "https://j3z-apps.github.io/task",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
