@@ -8,8 +8,4 @@ Built with React (frontend) + Node Express (backend - API that communicates with
 ## Features
 * Login / Sign Up functionality
 * Add/Delete, Complete/Incomplete tasks
-* Nice UI :)
-
-## Support
-This application is supported on most web browsers. Mobile Phones have nice responsiveness as well as a desktop computer
 
